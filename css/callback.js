@@ -1,3 +1,11 @@
+const scrollButtons = document.querySelectorAll(".scrollButton");
+
+scrollButtons.forEach((scrollButton) => {
+  scrollButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
 const clock = document.querySelector("h2#clock");
 
 function getClock() {

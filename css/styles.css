@@ -43,7 +43,7 @@
   right: 480px;
   width: 400px;
   border: 5px solid red;
-  padding: 10px; /* 원하는 안쪽 여백을 설정하세요 */
+  padding: 10px;
 }
 .call-list {
   text-align: center;
@@ -69,4 +69,20 @@
   position: fixed;
   top: 30px;
   right: 50px;
+}
+
+.scroll-to-top {
+  margin-left: 50px;
+}
+
+.scrollButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.scrollButton:hover {
+  background-color: #0056b3;
 }
