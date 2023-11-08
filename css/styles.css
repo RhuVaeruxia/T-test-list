@@ -1,6 +1,6 @@
 .t-list {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 300px;
   border: 1px solid red;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .title-name {
-  width: 500px;
+  width: 800px;
   height: 100%;
   border: 1px solid black;
   margin-top: 2em;
@@ -26,4 +26,47 @@
 .back {
   font-size: 1.5em;
   margin-left: 1em;
+}
+
+#Pad-table {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#AS-table {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.callback-list {
+  position: fixed;
+  top: 50px;
+  right: 480px;
+  width: 400px;
+  border: 5px solid red;
+  padding: 10px; /* 원하는 안쪽 여백을 설정하세요 */
+}
+.call-list {
+  text-align: center;
+}
+#clock {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.input-text {
+  width: 80%;
+  margin-left: 2em;
+}
+
+.list-button {
+  position: fixed;
+  right: 510px;
+}
+
+.memo {
+  position: fixed;
+  top: 30px;
+  right: 50px;
 }

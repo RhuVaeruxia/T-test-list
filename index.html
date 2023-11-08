@@ -73,5 +73,134 @@
         <pre>내용</pre>
       </div>
     </div>
+
+    <!-- 제품 비교 -->
+    <div id="Pad-table">
+      <table border="1">
+        <tr>
+          <th>종류</th>
+          <th>아이템</th>
+          <th>아이템</th>
+        </tr>
+        <tr>
+          <th>속도</th>
+          <td>T500</td>
+          <td>X200</td>
+        </tr>
+        <tr>
+          <th>무게</th>
+          <td>50g</td>
+          <td>50g</td>
+        </tr>
+        <tr>
+          <th>화면</th>
+          <td>20</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <th>성능</th>
+          <td>13</td>
+          <td>14</td>
+        </tr>
+        <tr>
+          <th>시스템</th>
+          <td>16</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <th>메모리</th>
+          <td>17</td>
+          <td>122</td>
+        </tr>
+        <tr>
+          <th>카메라</th>
+          <td>13</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th>배터리</th>
+          <td>13</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <th>유습</th>
+          <td>12</td>
+          <td>11</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 정책 -->
+    <div id="AS-table">
+      <table border="1">
+        <tr>
+          <th>기간</th>
+          <th>과실</th>
+          <th>발급</th>
+          <th>교환</th>
+        </tr>
+        <tr>
+          <td rowspan="2">14-30일</td>
+          <td>있음</td>
+          <td>가능</td>
+          <td>가능</td>
+        </tr>
+        <tr>
+          <td>없음</td>
+          <td>불가</td>
+          <td>유상</td>
+        </tr>
+        <tr>
+          <td rowspan="3">31~1년</td>
+          <td>있음</td>
+          <td>불가</td>
+          <td>유상&무상</td>
+        </tr>
+        <tr>
+          <td>없을시</td>
+          <td>3회</td>
+          <td>가능</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td rowspan="1">1년이후</td>
+          <td>있나</td>
+          <td>불가</td>
+          <td>유상</td>
+        </tr>
+      </table>
+    </div>
+    <div class="callback-list">
+      <h2 id="clock">00:00</h2>
+      <h4 class="call-list">해야할일</h4>
+      <form id="todo-form">
+        <input
+          class="input-text"
+          type="text"
+          placeholder="할일 적기 예) 한현우 22시 퇴근 하기 입력후 엔터"
+          required
+        />
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
+
+    <!-- 메모용 -->
+
+    <div class="memo">
+      <h1>상담 메모용</h1>
+      <textarea
+        id="memo"
+        rows="10"
+        cols="40"
+        placeholder="메모를 입력하세요..."
+      ></textarea>
+
+      <button id="clear">내용지우기</button>
+    </div>
+    <script src="css/callback.js"></script>
   </body>
 </html>
