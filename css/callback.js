@@ -78,3 +78,62 @@ document.getElementById("clear").addEventListener("click", function () {
   document.getElementById("memo").value = "";
   localStorage.removeItem("memo");
 });
+
+// 달력
+
+function createCalendar(year, month) {
+  const calendarContainer = document.getElementById("calendar-container");
+  const currentDate = new Date(year, month - 1, 1);
+  const lastDay = new Date(year, month, 0).getDate();
+
+  let html = `<h2 class="Calendar-h2">${year}년 ${month}월</h2>`;
+  html += "<table id='calendar'>";
+  html +=
+    "<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>";
+  let day = 1;
+
+  for (let i = 0; i < 6; i++) {
+    html += "<tr>";
+
+    for (let j = 0; j < 7; j++) {
+      if (i === 0 && j < currentDate.getDay()) {
+        html += "<td></td>";
+      } else if (day > lastDay) {
+        break;
+      } else {
+        const isToday = isSameDate(new Date(), new Date(year, month - 1, day));
+        const className = isToday ? "today" : "";
+        html += `<td class="${className}" onclick="selectDate(${day})">${day}</td>`;
+        day++;
+      }
+    }
+
+    html += "</tr>";
+  }
+
+  html += "</table>";
+  calendarContainer.innerHTML = html;
+}
+
+function selectDate(day) {
+  const selectedDate = document.querySelector(".selected");
+  if (selectedDate) {
+    selectedDate.classList.remove("selected");
+  }
+
+  const selectedDay = document.querySelector(
+    `td:nth-child(${day + currentDate.getDay()})`
+  );
+  selectedDay.classList.add("selected");
+}
+
+function isSameDate(date1, date2) {
+  return (
+    date1.getFullYear() === date2.getFullYear() &&
+    date1.getMonth() === date2.getMonth() &&
+    date1.getDate() === date2.getDate()
+  );
+}
+
+const currentDate = new Date();
+createCalendar(currentDate.getFullYear(), currentDate.getMonth() + 1);
