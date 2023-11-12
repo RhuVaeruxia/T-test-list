@@ -9,8 +9,17 @@ a:active {
   text-decoration: none;
 }
 
+li {
+  margin-bottom: 5px;
+}
+
 .link-main {
   margin-left: 2rem;
+}
+
+.eyes {
+  margin-left: 30px;
+  color: red;
 }
 
 .title-name {
@@ -42,17 +51,20 @@ a:active {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
 .callback-list {
   position: fixed;
   top: 50px;
-  right: 370px;
+  right: 380px;
   width: 400px;
   border: 5px solid red;
   padding: 10px;
 }
+
 .call-list {
   text-align: center;
 }
+
 #clock {
   text-align: center;
   font-size: 24px;
@@ -67,13 +79,13 @@ a:active {
 
 .list-button {
   position: fixed;
-  right: 390px;
+  right: 400px;
 }
 
 .memo {
   position: fixed;
   top: 30px;
-  right: 50px;
+  right: 5px;
 }
 
 .scroll-to-top {
@@ -123,4 +135,10 @@ a:active {
 #calendar .today {
   background-color: #007bff;
   color: white;
+}
+
+.e-mail-list {
+  width: 350px;
+  height: 100%;
+  border: 1px solid green;
 }
