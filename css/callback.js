@@ -79,6 +79,7 @@ document.getElementById("clear").addEventListener("click", function () {
   localStorage.removeItem("memo");
 });
 
+
 // 달력
 
 function createCalendar(year, month) {
@@ -137,3 +138,31 @@ function isSameDate(date1, date2) {
 
 const currentDate = new Date();
 createCalendar(currentDate.getFullYear(), currentDate.getMonth() + 1);
+
+
+
+
+  function getCurrentDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = (today.getMonth() + 1).toString().padStart(2, '0');
+    const day = today.getDate().toString().padStart(2, '0');
+
+    return `${year}${month}${day}_기술상담통계_`;
+  }
+
+
+  function displayFormattedDate() {
+    const formattedDate = getCurrentDate();
+    const name = "한현우";
+
+    const result = `${formattedDate}_${name}`;
+
+
+    const paragraphElement = document.getElementById("e-mail-title");
+    if (paragraphElement) {
+      paragraphElement.textContent = result;
+    }
+  }
+
+  displayFormattedDate();
